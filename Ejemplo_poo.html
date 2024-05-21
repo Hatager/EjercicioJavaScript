@@ -1,0 +1,866 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+
+    <p>Esto es únicamente para la parte dónde se llama la función</p>
+    <p>Vamos a ver cómo se comporta una página web utilizando javacript</p>
+    <form action="">
+        <input type="button" value="Púlsame" onclick="llamaFuncion()">
+    </form>
+    <script type="text/javascript">
+
+
+        // función con document.write
+        /*
+        function llamaFuncion(){
+            document.write("Esto es lo que se escribe al ejecutarse 'document.write'");
+        };
+        */
+        
+
+
+
+        /*
+        // continue; se utiliza para saltar a la siguiente interacción y no salir por completo del bucle
+        // En este caso, saltará a la siguiente parte del código cuando los números sean pares saltarán a la siguiente parte del buble y no llegaría al console.log, solo
+        // mostraría los impares.
+        for (var i = 0; i <=10; i++){
+            if(i % 2 === 0){
+                continue;
+            }
+            console.log(i);
+        }
+
+
+        // break; se utilzia para salir de una sentencia cuano se cumple cierta condición, se detendrá cuando la variable "i" valga 6 y saldrá del programa.
+        for (var i = 0; i <=10; i+=2){
+            console.log("Este ontador va de 2 en 2: " + i);
+            if(i === 6){
+                break;
+            }
+        }
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        // metodo sort();  metodo para ordenar.
+        // Primer metodo ordena palabras.
+        var palabras = ["reservado", "premio", "comunicación", "café", "adios", "pan", "platano"];
+        palabras.sort((a,b) => a.localeCompare(b));
+        console.log(palabras);
+
+        // Segundo metodo ordenar por números.
+        // Realiza la ordenación solo por el primer caracter del número, el 6 irá despues del 54 y el 55.
+        var numeros = [1,3,6,4,54,75,84,2,55];
+        numeros.sort();
+        console.log(numeros);
+
+        // Tercer metodo ordenar por números ascendentes.
+        var numeros2 = [1,3,6,4,54,75,84,2,55];
+        numeros2.sort((a,b) => a - b);
+        console.log(numeros2);
+
+        // Tercer metodo ordenar por números desscendentes.
+        var numeros3 = [1,3,6,4,54,75,84,2,55];
+        numeros3.sort((a,b) => b - a);
+        console.log(numeros3);
+
+        // Cuarto metodo sort con arrays de objetos por propiedades
+        var orden  = [
+                {
+                    nombreCliente: "Orlando",
+                    total: 40,
+                    entregado: false,
+                },
+                {
+                    nombreCliente: "Orlando de la otra clase",
+                    total: 120,
+                    entregado: true,
+                },
+                {
+                    nombreCliente: "Nestor",
+                    total: 180,
+                    entregado: false,
+                },
+                {
+                    nombreCliente: "Mei",
+                    total: 240,
+                    entregado: true,
+                },
+        ];
+        orden.sort((a,b) => b.total - a.total);
+        console.log(orden);
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Metodo flatMap() primero realizará la parte del map, y después la parte del flat.
+        // Primero método de flatMap
+        /*
+        var string = ["Nunca pares", "de Aprender"];
+        var junto = string.flatMap(junto => junto.split(" "));
+        console.log(junto);
+
+        var numeros = [1,2,3,4];
+        var numero = numeros.flatMap(numero => [numero * 2]);
+        console.log(numero);
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // metodo flat() trabajar con array de arrays
+        // Primer metodo del flat
+        /*
+        var matriz = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9],
+        ];
+
+        var flatArray = [];
+        for (let i = 0; i < matriz.length; i++){
+            var array = matriz[i];
+            for (let j = 0; j < array.length; j++){
+                flatArray.push(matriz[i][j]);
+            }
+        }
+        console.log(flatArray);
+        */
+
+        // Segundo metodo del flat
+        /*
+        var matriz = [1,2,[3,4],5,6];
+        var resultado = matriz.flat();
+        console.log(resultado);
+        */
+
+        // Tercer metodo de flat()
+        // hay que usar un flat por cada corchete interior de la matriz.
+        /*var array2 = [1,2,[3,4,[5,6]]];
+        var resultado2 = array2.flat(2);
+        console.log(resultado2);
+        var resultado3 = resultado2.flat();
+        console.log(resultado3);
+        */
+
+        // Cuarto metodo flat, al poner un 2 en el flat(2); hará los dos pasos anteriores del flat en solo uno, pues es el valor de profundidad del flat().
+        /*var array = [1,2,[3,4,[5,6]]];
+        var resultado = array.flat(2);
+        console.log(resultado);
+        */
+
+        // cuarta forma del metodo flat, cuando hay mucha profundidad, se puede colocar Infinity dentro del flat para que haga todas las profundidades.
+        /*
+        var array = [1,2,[3,4,[5,6,[7,8,[9,10]]]]];
+        var resultado = array.flat(Infinity);
+        console.log(resultado);
+        */
+
+
+
+
+
+
+/*
+        // concat
+        var numeros1 = [1,2,3,4];
+        var numeros2 = [5,6,7,8];
+        var numeros3 = [9,10,11,12];
+        var resultado1 = numeros1.concat("Hola", "mundo");
+        var resultado2 = numeros1.concat(numeros2);
+        var resultado3 = numeros1.concat(numeros2, "Hola");
+        var resultado4 = numeros1.concat(numeros2, numeros3);
+
+        console.log(resultado1);
+        console.log(resultado2);
+        console.log(resultado3);
+        console.log(resultado4);
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+        // split separar cadenas de texto
+        var cadena = "El aprendizaje es experiencia, todo lo demás es información. Albert Einstein";
+        console.log(cadena.split(" "));
+        console.log(cadena.split(","));
+        console.log(cadena.split("Albert"));
+        console.log(cadena.split(" ", 4));
+*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+        // fusión de null
+        var elementos = ["hola", null, "como", "estas"];
+
+        var resultado = elementos.join('/');
+        console.log(resultado);
+
+*/
+
+
+
+/*
+        // opereador fusión de null
+        var elementos = ["hola", null, "como", "estas"];
+        let aculumador = "";
+        const separador = "/";
+
+        for (let i = 0; i < elementos.length; i++){
+            const elemento = elementos[i] ?? "";
+            if(i !== elementos.length -1){
+                aculumador += elemento + separador;
+            }else{
+                aculumador += elemento;
+            }
+        }
+        console.log(aculumador);
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        // Includes con frutas
+        var frutas = ["manzana", "pera", "piña", "uva"];
+        function includesWithNegativeIndex(array, searchValue, index=null){
+            if(index === null){
+                index = array.indexOf(searchValue);
+            }
+            if(index < 0){
+                index = array.length + index;
+            }
+            return array[index] === searchValue;
+        }
+        console.log(includesWithNegativeIndex(frutas, "manzana"));
+        console.log(includesWithNegativeIndex(frutas, "manzana", 0));
+        console.log(includesWithNegativeIndex(frutas, "manzana", -4));
+        console.log(includesWithNegativeIndex(frutas, "pera"));
+        console.log(includesWithNegativeIndex(frutas, "pera", 1));
+        console.log(includesWithNegativeIndex(frutas, "pera", -3));
+        console.log(includesWithNegativeIndex(frutas, "piña"));
+        console.log(includesWithNegativeIndex(frutas, "piña", 2));
+        console.log(includesWithNegativeIndex(frutas, "piña", -2));
+        console.log(includesWithNegativeIndex(frutas, "uva"));
+        console.log(includesWithNegativeIndex(frutas, "uva", 3));
+        console.log(includesWithNegativeIndex(frutas, "uva", -1));
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        // Includes con index
+        var saludo = "Hola mundo";
+        function includesWithNegativeIndex(string, searchValue, index=0){
+            if(index < 0){
+                index = string.length + index;
+            }
+            return string.includes(searchValue, index);
+        }
+
+        console.log(includesWithNegativeIndex(saludo, "Hola"));
+        console.log(includesWithNegativeIndex(saludo, "hola"));
+        console.log(includesWithNegativeIndex(saludo, " "));
+        console.log(includesWithNegativeIndex(saludo, "mundo"));
+        console.log(includesWithNegativeIndex(saludo, "Mundo"));
+        console.log(includesWithNegativeIndex(saludo, "Hola", 0));
+        console.log(includesWithNegativeIndex(saludo, "", 4));
+        console.log(includesWithNegativeIndex(saludo, "mundo", 5));
+        console.log(includesWithNegativeIndex(saludo, "Hola",1 ));
+        console.log(includesWithNegativeIndex(saludo, "Hola", 6));
+        console.log(includesWithNegativeIndex(saludo, "Hola", -10));
+        console.log(includesWithNegativeIndex(saludo, "mundo", -5));
+        console.log(includesWithNegativeIndex(saludo, "Hola", 9));
+        console.log(includesWithNegativeIndex(saludo, "Hola", -4));
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        // Includes
+        var pets = ["Gato", "Perro", "Murcielago"];
+
+        let includesArray = false;
+
+        for (let i = 0; i < pets.length; i++){
+            var item = pets[i];
+            if(item === "Gato"){
+                includesArray = true;
+                break;
+            }
+        }
+        console.log(includesArray);
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        // Diferencia for y every
+
+        // Ejemplo con for
+        var numeros = [1, 30, 41, 29, 10, 13];
+        var respuesta = true;
+        for (let i = 0; i < numeros.length; i++){
+            const elemento = numeros[i];
+            if (elemento > 40){
+                respuesta = false;
+                break;
+            }
+        }
+        console.log(respuesta);
+
+
+        var numeros = [1, 30, 41, 29, 10, 13];
+        var respuesta = true;
+        var valorIncumplido = null;
+        
+        for (let i = 0; i < numeros.length; i++){
+            const elemento = numeros[i];
+            if (elemento > 40){
+                respuesta = false;
+                valorIncumplido = elemento;
+                break;
+            }
+        }
+        console.log(respuesta);
+        console.log(valorIncumplido);
+
+        //Ejemplo con Every
+        var numeros = [1, 30, 41, 29, 10, 13];
+        var respuesta = numeros.every(item => item <= 40);
+        console.log(respuesta);
+*/
+
+        
+
+
+        
+
+
+
+
+
+
+
+/*      // Some y Find
+        // Encuentra números par
+
+        // te dice solo si hay un par
+        const numeros = [1,3,3,5];
+        const respuesta = numeros.some(item => item % 2 === 0);
+        console.log(respuesta);
+
+        // te dice cual es el número par
+        const par = numeros.find(item => item % 2 === 0);
+        console.log(par);
+
+
+        if(par !== undefined){
+            console.log("Valor par encontrado " + par);
+        }else{
+            console.log("Ningun par encontrado");
+        }
+        */
+
+
+/*
+        // for some 
+
+        // Devuelve solo un número par
+        const numeros = [1,2,3,5];
+        let respuesta = false;
+        let numeroPar = null;
+
+        for(let i = 0; i < numeros.length; i++){
+            const elementos = numeros[i];
+            if(elementos % 2 === 0){
+                respuesta = true;
+                numeroPar = elementos;
+            }
+        }
+        console.log(respuesta);
+        console.log(numeroPar);
+        */
+
+        /*   
+        // for some veresión 2
+
+        // Devuelve todos los números pares     
+        for(let i = 0; i < numeros.length; i++){
+            const elementos = numeros[i];
+            if(elementos % 2 === 0){
+                respuesta = true;
+                numeroPar = elementos;
+                console.log(numeroPar);
+            }
+        }
+        console.log(respuesta);
+
+        */
+
+
+
+
+
+
+
+/*
+        // similar al some, revuelve true únicamente cuando exista un número par dentro del array
+        const numeros = [1,2,3,5];
+
+        let respuesta = false;
+        for(let i = 0; i < numeros.length; i++){
+            const element = numeros[i];
+            if (element % 2 === 0){
+                respuesta = true;
+                break;
+            }
+        }
+        console.log(respuesta);
+*/
+
+/*
+        // reduced() reloaded       suma el total de los números del array
+        const items = [1,3,1,2,3,4,1,2,4,5,6,7,5,3,2];
+
+        const inicio = 0;
+        const suma = items.reduce(
+        (acumulador, valor) => acumulador + valor,
+        inicio,
+        );
+
+        console.log(suma);
+
+        */
+
+/*
+        // Trabajamos con filtros
+        let pedidosAmazon = [
+
+        {
+            nombreCliente: "Orlando",
+            total: 40,
+            entregado: false,
+        },
+        {
+            nombreCliente: "Orlando de la otra clase",
+            total: 120,
+            entregado: true,
+        },
+        {
+            nombreCliente: "Nestor",
+            total: 180,
+            entregado: false,
+        },
+        {
+            nombreCliente: "Mei",
+            total: 240,
+            entregado: true,
+        },
+        ];
+        console.log(pedidosAmazon);
+        const nuevoPedido = pedidosAmazon.filter(pedido => pedido.total > 150);
+        console.log(nuevoPedido);
+        */
+
+
+/*
+
+// crea un nuevo array de todas las palabras con 6 o más letras
+
+const  words = ["spray", "elites", "limit", "apple", "exuberant"];
+
+const newWords = [];
+
+for (let i = 0; i < words.length; i++){
+    const word = words[i];
+    if(word.length >= 6){
+        newWords.push(word);
+    }
+}
+console.log(words);
+console.log(newWords);
+
+*/
+
+
+
+/*
+
+        // pruebas con map reloaded
+
+        let pedidosAmazon = [
+
+            {
+                nombreCliente: "Orlando",
+                total: 40,
+                entregado: false,
+            },
+            {
+                nombreCliente: "Orlando de la otra clase",
+                total: 120,
+                entregado: true,
+            },
+            {
+                nombreCliente: "Nestor",
+                total: 180,
+                entregado: false,
+            },
+            {
+                nombreCliente: "Mei",
+                total: 240,
+                entregado: true,
+            },
+        ];
+        console.log(pedidosAmazon);
+
+
+
+        
+
+        //Mapeado con nombre total y entregado
+
+        let nombreClientes = pedidosAmazon.map(pedido => pedido.nombreCliente);
+        console.log(nombreClientes);
+        let totalClientes = pedidosAmazon.map(pedido => pedido.total);
+        console.log(totalClientes);
+        let entregadoClientes = pedidosAmazon.map(pedido => pedido.entregado);
+        console.log(entregadoClientes);
+
+        // Transformación objetos dentro de un array
+
+
+        // Este sí modifica el original
+        let tarifas = pedidosAmazon.map(pedido =>{
+            pedido.impuesto = 0.19;
+            return pedido;
+        });
+
+        // Este no modifica el original
+        let tarifas = pedidosAmazon.map(pedido =>{
+            return {
+                pedido, 
+                impuesto : 0.19,
+            }
+        });
+
+
+
+        console.log(tarifas);
+        console.log(tarifas[0] === pedidosAmazon[0]);
+        console.log(tarifas[1] === pedidosAmazon[1]);
+        console.log(tarifas[2] === pedidosAmazon[2]);
+        console.log(tarifas[3] === pedidosAmazon[3]);
+
+        */
+        
+
+
+
+
+
+
+
+        /*
+        // Pruebas con map en arrays
+
+        let numeros = [1,2,3,4,5];
+        let nuevosNumeros = numeros.map(function(numero){
+            return numero * 2;
+        });
+        console.log(nuevosNumeros);
+
+        let nuevosNumeros2 = numeros.map(numero => numero * 2);
+        console.log(nuevosNumeros2);
+
+        */
+
+
+
+/*
+// Encontrar el número más pequeño
+
+var numeros = parseInt(prompt("Numeros"));
+while(numeros != 0){
+    var numeros = parseInt(prompt("Numeros"));
+
+var pequeño = numeros[0];
+for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] < pequeño) {
+        pequeño = numeros[i];
+    }   
+}
+}console.log(pequeño);
+
+
+
+var numeros = new Counter([5, 2, 3, 5, 1, 5, 7, 12]);
+
+
+
+function Counter(array) {
+    let pequeño = array[0]; 
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < pequeño) {
+            pequeño = array[i];
+        }
+    }
+    console.log(pequeño);
+}
+*/
+
+
+
+
+
+/*
+
+function Counter(array){
+    this.sum = 0;
+    this.count = 0;
+
+    for(let i = 0; i < array.length; i++){
+        this.sum += array[i];
+        ++this.count;
+    }
+}
+
+var obj = new Counter([2,5,9]);
+console.log(obj.count);
+console.log(obj.sum);
+
+
+function Counter(array){
+    this.sum = 0;
+    this.count = array.length;
+
+    array.forEach((value) =>{
+        this.sum += value;
+    });
+}
+
+var obj = new Counter([2, 5, 9]);
+console.log(obj.count);
+console.log(obj.sum);
+
+*/
+
+
+
+
+
+
+
+
+
+
+   /*     
+           var articulos = [
+            {nombres: 'Bici', costo: 3000},
+            {nombres: 'TV', costo: 2500},
+            {nombres: 'Libro', costo: 320},
+            {nombres: 'Celular', costo: 10000},
+            {nombres: 'Laptop', costo: 20000},
+            {nombres: 'Teclado', costo: 500},
+            {nombres: 'Audifonos', costo: 1700}
+        ];
+   
+   
+   
+   var hola = articulos.indexOf('Bici');
+        console.log(hola);
+
+
+        var existeArticulo = articulos.some(function(articulo){
+            return articulo.costo <= 700;
+        });
+        console.log(existeArticulo);
+
+
+
+        articulos.forEach(function(articulo){
+            console.log(articulo);
+        });
+
+
+        var algunArticulo = articulos.find(function(articulo){
+            return articulo.nombres === "Libro";
+        }) ;
+        console.log(algunArticulo);
+
+
+
+        var soloNombres = articulos.filter(function(articulos){
+            return articulos.costo >= 2000;
+        }).map(function(articulos){
+            return articulos.nombres;
+        });
+        console.log(soloNombres);
+
+
+
+
+
+        var articulosCaros = articulos.filter(function(articulos){
+            return articulos.nombres != "Libro" && articulos.costo >= 2000;
+        })
+        console.log(articulosCaros);
+
+        articulosCaros.pop();
+        console.log(articulosCaros);
+
+
+
+        var miAuto = {
+            marca: "Land Rover",
+            modelo: "Freelander",
+            año: 1994,
+            detalle : function(){
+                document.write(`El mio carro ${this.modelo} es del ${this.año}<br>`);
+            }
+        }
+
+        // alert(miAuto["marca"]);
+        document.write(miAuto.marca + "<br>");
+        document.write(miAuto.modelo + "<br>");
+        document.write(miAuto.año + "<br>");
+        miAuto.detalle();
+        var modelo;
+        document.write(miAuto[modelo] + "<br>");
+        document.write(miAuto["modelo" ]+"<br>");
+
+        miAuto["color"] = "Gris";
+        document.write(miAuto.color + "<br>");
+        console.log(miAuto);
+        miAuto["año"] = 2001;
+        document.write(miAuto["año"]+"<br>");
+        delete miAuto.año;
+        document.write(miAuto["año"]+"<br>");
+
+
+        function auto(brand, model, year){
+            this.marca = brand;
+            this.modelo = model;
+            this.año = year;
+            this.detalle = function(){
+                document.write(`Es un ${this.modelo} del año ${this.año}`);
+            }
+        }*/
+
+
+    </script>
+</body>
+</html>

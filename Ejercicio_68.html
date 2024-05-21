@@ -1,0 +1,39 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 68</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+
+        function Persona(DNI, Nombre, Apellidos, Direccion, CodigoPostal, Ciudad, TelMovil, Email, FechaNacimiento){
+            this.DNI = DNI;
+            this.Nombre = Nombre;
+            this.Apellidos = Apellidos;
+            this.Direccion = Direccion;
+            this.CodigoPostal = CodigoPostal;
+            this.Ciudad = Ciudad;
+            this.TelMovil = TelMovil;
+            this.Email = Email;
+            this.FechaNacimiento = FechaNacimiento;
+            this.detalle = function(){
+                console.log(`DNI: ${this.DNI} \n\rNombre: ${this.Nombre} \n\rApellidos: ${this.Apellidos} \n\rDirección: ${this.Direccion} \n\rCódigo postal: ${this.CodigoPostal} \n\rCiudad: ${this.Ciudad}\n\rTeléfono móvil: ${this.TelMovil} \n\rEmail: ${this.Email} \n\rFecha de nacimiento: ${this.FechaNacimiento}`);
+            }
+        }
+
+        var Orlando = new Persona("01010101-A", "Orlando", "Rafael", "Calle de Soria nº 7", "42001", "Soria", "685320120", "OrlandoRafael@gmail.com", "17-02-1960");
+        Orlando.detalle();
+
+        var Javi = new Persona("48521421-X", "Javi", "Gallardo", "Calle Islas Galapagos 2", "42361", "Berlanga de Duero", "658871397", "JaviYo@gmail.com", "30-10-1994");
+        Javi.detalle();
+
+        var Nestor = new Persona("201020302-S", "Nestor", "De Pablo", "Calle Falsa nº 123", "42001", "Soria", "851268234", "NestorDePablo@gmail.com", "22-11-1997");
+        Nestor.detalle();
+
+
+    </script>
+</body>
+</html>

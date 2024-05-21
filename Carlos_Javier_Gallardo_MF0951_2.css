@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background-image: url("https://static.wixstatic.com/media/dd00dd_036c89ae22064f6389000f965d69a589~mv2.gif");
+    background-color: rgb(213, 255, 251);
+    font-family: 'Times New Roman', Times, serif;
+    color:blue;
+}
+h1{
+    font-size: 75px;
+}
+div{
+    font-size: 45px;
+
+}
+button{
+    background-color: rgb(183, 0, 255);
+    font-size: 75px;
+    color: blue;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}

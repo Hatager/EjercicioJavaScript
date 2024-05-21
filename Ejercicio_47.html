@@ -1,0 +1,26 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 47</title>
+</head>
+<body>
+
+    
+    <script>
+        var suma = 0;
+        var contador = 0;
+        var media;
+        var numero = prompt("Introduce un número.");
+        while(parseInt(numero)!==0){
+            suma = parseInt(suma) + parseInt(numero);
+            contador = contador + 1
+            numero = prompt("Introduce otro número.")
+        }
+        media = parseInt(suma) / parseInt(contador);
+        alert("La suma es: " + suma);
+        alert("La media es: " + media);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 46</title>
+</head>
+<body>
+
+    
+    <script>
+        var num1 = prompt("Introduce el primer número.");
+        var num2 = prompt("Introduce el segundo número.");
+        var operacion = prompt("+ - * / ");
+        if(operacion === "+"){
+            alert("La suma de los números es: " + (parseInt(num1) + parseInt(num2)))
+        }else if(operacion === "-"){
+            alert("La resta de los números es: " + (parseInt(num1) - parseInt(num2)))
+        }else if(operacion === "*"){
+            alert("La multiplicación de los números es: " + (parseInt(num1) * parseInt(num2)))
+        }else if(operacion === "/"){
+            if(parseInt(num2) != 0){
+                alert("La división de los números es: " + (parseInt(num1) / parseInt(num2)))
+            }else{
+                alert("No se puede dividir por 0");
+            }
+        }else{
+            alert("Operación no valida.");
+        }
+        
+        
+    </script>
+
+</body>
+</html>

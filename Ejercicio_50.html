@@ -1,0 +1,35 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 50</title>
+</head>
+<body>
+
+    <script>
+
+
+        function capicua(num){
+            var numInvertido = 0;
+            var numOriginal = num;
+            while(num > 0){
+                let ultimoDigito = num % 10;
+                numInvertido = (numInvertido * 10) + ultimoDigito;
+                num = Math.floor(num / 10);
+            }
+            if (numOriginal == numInvertido){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        var numero = parseInt(prompt("Introduce un número."));
+        if(capicua(numero)){
+            document.write("Es capicua");
+        }else{
+            document.write("No es capicua");
+        }
+        </script>
+
+</body>
+</html>

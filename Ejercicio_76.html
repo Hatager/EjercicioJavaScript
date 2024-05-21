@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 76</title>
+    <style>
+        img{
+            width: 350px;
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function click1(){
+            alert("Hiciste un click");
+        }
+        function click2(){
+            alert("Hiciste un doble click");
+        }
+        function click3(){
+            alert("Presionaste el botón");
+        }
+        function click4(){
+            alert("Soltaste el botón");
+        }
+        function click5(){
+            alert("Entraste en la imagen");
+        }
+        function click6(){
+            alert("Saliste de la imagen");
+        }
+        function click7(){
+            alert("Te mueves en la imagen");
+        }
+    </script>
+    <img src="FotoLobo.avif" alt="La foto de un lobo" onclick="click1()">
+    <img src="FotoLobo.avif" alt="La foto de un lobo" ondblclick="click2()">
+    <img src="FotoLobo.avif" alt="La foto de un lobo" onmousedown="click3()" onmouseup="click4()" onmousemove="click7()">
+    <img src="FotoLobo.avif" alt="La foto de un lobo" onmouseenter="click5()" onmouseleave="click6()">
+</body>
+</html>

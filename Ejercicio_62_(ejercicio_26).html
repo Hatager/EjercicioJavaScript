@@ -1,0 +1,46 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 62</title>
+</head>
+<body>
+    <h1>Calcular el doble</h1>
+    <label for="num">Introduce un número</label>
+    <input type="number" id="num">
+    <button id="boton" onclick="calcularDoble()">Calcular doble</button>
+    <div id="resultado"></div>
+
+    <script type="text/javascript">
+
+
+
+function calcularDoble(){ 
+        var numero = parseInt(document.getElementById("num").value);
+        var resultado = document.getElementById("resultado");
+        while(numero !== 0){
+
+                if(numero < 0){
+                    console.log("Entro al if");
+                    resultado.innerHTML += "El número introducido es negativo <br>";
+                    return;
+                
+                }else if(numero === 0){
+                    console.log("Entro al else if");
+                    break;
+                }else{
+                    console.log("Entro al else");
+                    let doble = numero * 2;
+                    resultado.innerHTML += "El doble de " + numero + " es: " + doble + "<br>";
+                    return;
+                }var numero = parseInt(document.getElementById("num").value);
+            }resultado.innerHTML += "Se ha introducido un número 0. <br>";
+            console.log("No entro en ninguno.");
+            document.getElementById("boton").disabled = true;
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 52</title>
+</head>
+<body>
+
+    <h1>Verificar si un número es positvo, negativo o 0</h1>
+    <label for="cantidad">Números de articulos comprados: </label>
+    <input type="number" id="cantidad" placeholder="Introduce un número"><br>
+    <button onclick="Verificar()">Comprueba</button>
+    <p id="resultado"></p>
+
+    <script type="text/javascript">
+        function Verificar(){
+
+            var cantidad = parseInt(document.getElementById("cantidad").value);
+            var resultado = document.getElementById("resultado");
+            if(cantidad > 0){
+                resultado.innerHTML = "Es positivo";
+            }else if(cantidad < 0){
+                resultado.innerHTML = "Es negativo";
+            }else{
+                resultado.innerHTML = "Es cero";
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

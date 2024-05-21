@@ -1,0 +1,25 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 48</title>
+</head>
+<body>
+
+    <script>
+        var edad = parseInt(prompt("Introduce tu edad."));
+
+        while(edad <= 0 || edad >= 18){
+            edad = parseInt(prompt("Introduce tu edad."));
+        }
+        document.write("La edad introducida es: " + edad + "<br>");
+
+        var edad2;
+        do {
+            edad2 = parseInt(prompt("Introduce tu edad2."));
+        }while(edad2 <= 0 || edad2 >= 18)
+        document.write("La edad2 introducida es: " + edad2);
+    </script>
+
+</body>
+</html>

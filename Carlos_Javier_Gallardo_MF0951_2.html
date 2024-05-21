@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Ejercicio práctico MF0951_2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="autor" content="Carlos Javier Gallardo Rodríguez">
+        <meta name="encoding" content="UTF-8 BOM">
+        <meta name="generator" content="Visual Studio Code">
+        <meta name="keywords" content="Lenguaje HTML-5, CSS3, JavaScript">
+        <meta name="description" content="Ordenamiento de números aleatorios con algoritmo de burbuja">
+        <link href="Carlos_Javier_Gallardo_MF0951_2.css" rel="stylesheet">
+        
+        <script>
+        // Inicio array números vacío.
+        var arrayNumeros = [];
+
+        // Cuando se carga la página, se mostrará el rexto con el array de números desordenados.
+        window.onload = function mostrar(){
+        document.getElementById('mostrarPantalla').innerHTML = "Los números desordenados son: " + arrayNumeros;
+        };
+
+        // Recorremos el array 9 veces y lo vamos llenando con números aleatorios.
+        for(let i = 0; i <= 8; i++){
+            var numeroAleatorio = numero_aleatorio(1,99);
+            arrayNumeros.push(numeroAleatorio);
+        }
+
+        // Creamos una función para rellenar el array con números aleatorios.
+        function numero_aleatorio(min, max) {
+            var numeroAleatorio = Math.floor(Math.random()*max) + min;
+            return numeroAleatorio;
+
+        }
+
+        // Creamos una función para ordenar el array con el método sort.
+        function Ordenar(arrayNumeros){
+            arrayNumeros.sort((a,b) => a-b);
+            document.getElementById('mostrarPantalla').innerHTML = "Los números ordenados son: " + arrayNumeros;
+        }
+
+
+
+            
+        </script>
+    </head>
+    <body>
+        <h1>Ordenamiento por Algoritmo de Burbuja</h1>
+        <div id="mostrarPantalla"></div><br>
+        <button onclick="Ordenar(arrayNumeros)">Ordenar</button>
+    
+    </body>
+</html>

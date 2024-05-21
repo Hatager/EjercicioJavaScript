@@ -1,0 +1,45 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 59</title>
+</head>
+<body>
+
+    <h1>Verificar si un número es primo</h1>
+    <input type="number" id="numero" placeholder="Introduce un número">
+    <button onclick="verificar()">Verificar</button>
+    <p id="resultado"></p>
+
+
+
+
+    <script type="text/javascript">
+
+        function verificar(){
+            const numero = document.getElementById("numero").value;
+            const resultado = document.getElementById("resultado");
+            let esPrimo = true;
+            if(numero < 2){
+                esPrimo = false;
+            }else {
+                for (let i = 2; i < numero; i++){
+                    if(numero % i === 0){
+                        esPrimo = false;
+                        break;
+                    }
+                }
+            }
+            if (esPrimo){
+                resultado.innerHTML = "El número introducido " + numero + " es primo";
+            }else{
+                resultado.innerHTML = "El número introducido " + numero + " es payo";
+
+            }
+        }
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 53</title>
+</head>
+<body>
+    <h1>Comprobar numero par o impar</h1>
+    <label for="cantidad">Número a comprobar: </label>
+    <input type="number" id="cantidad" placeholder="Introduce un número"><br>
+    <button onclick="Verificar()">Comprueba</button>
+    <p id="resultado"></p>
+
+
+
+    <script type="text/javascript">
+        function Verificar(){
+
+            var cantidad = parseInt(document.getElementById("cantidad").value);
+            var resultado = document.getElementById("resultado");
+            if((cantidad % 2) === 0){
+                resultado.innerHTML = "Es par";
+            }else{
+                resultado.innerHTML = "Es impar";
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

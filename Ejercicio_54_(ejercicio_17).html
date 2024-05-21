@@ -1,0 +1,40 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 54</title>
+</head>
+<body>
+
+
+
+    <h1>Evaluar notas</h1>
+    <p>Introduzca la nota: </p>
+    <input type="number" id="nota" placeholder="Introduzca un número" min="0" max="20">
+    <button onclick="evaluar()">Evaluar</button>
+    <div id="resultado"></div>
+
+
+
+
+    <script type="text/javascript">
+
+
+        function evaluar() {
+            const nota = parseInt(document.getElementById('nota').value);
+            let resultado = document.getElementById('resultado');
+            if (nota >= 0 && nota <= 20) {
+                if (nota >= 10) {
+                    resultado.innerHTML = "Aprobaste";
+				} else {
+                    resultado.innerHTML = "Has palmado :(";
+				}
+            } else {
+                resultado.innerHTML = "Nota introduciza incorrecta.";
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

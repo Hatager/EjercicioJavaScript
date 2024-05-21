@@ -1,0 +1,67 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 65</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+
+        var jugador1, jugador1;
+
+        do{
+
+         jugador1 = parseInt(prompt("Jugador 1"));
+         jugador2 = parseInt(prompt("Jugador 2"));
+
+
+        switch(true){
+            case (jugador1 === 1 && jugador2 === 2):
+                alert("El jugador 2 gana");
+                break;
+            case (jugador1 === 2 && jugador2 === 3):
+                alert("El jugador 2 gana");
+                break;
+            case (jugador1 === 3 && jugador2 === 1):
+                alert("El jugador 2 gana");
+                break;
+            case (jugador1 === 1 && jugador2 === 3):
+                alert("El jugador 1 gana");
+                break;
+            case (jugador1 === 2 && jugador2 === 1):
+                alert("El jugador 1 gana");
+                break;
+            case (jugador1 === 3 && jugador2 === 2):
+                alert("El jugador 1 gana");
+                break;
+            default:
+                alert("Empate");
+
+                break;
+
+        }
+                console.log(jugador1);
+                console.log(jugador2);
+    }while(jugador1 === jugador2)
+        /*if(jugador1 === 1 && jugador2 === 2){
+            document.write("El jugador 2 gana");
+        }else if(jugador1 === 2 && jugador2 === 3){
+            document.write("El jugador 2 gana");
+        }else if(jugador1 === 3 && jugador2 === 1){
+            document.write("El jugador 2 gana");
+        }else if(jugador1 === 1 && jugador2 === 3){
+            document.write("El jugador 1 gana");
+        }else if(jugador1 === 2 && jugador2 === 1){
+            document.write("El jugador 1 gana");
+        }else if(jugador1 === 3 && jugador2 === 2){
+            document.write("El jugador 1 gana");
+        }else {
+            document.write("empate");
+        }*/
+
+
+    </script>
+</body>
+</html>

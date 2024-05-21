@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 79</title>
+
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        function mostrar(tecla){
+            var mensaje = document.getElementById("resultado");
+            if((tecla >= "a" && tecla <= "z") || (tecla >= "A" && tecla <= "Z") || (tecla === "ñ" || tecla === "Ñ") || tecla >= 0 || tecla <= 9){
+            mensaje.innerHTML = `Pulsaste la tecla: ${tecla.toUpperCase()}`;
+                }else{
+                    mensaje.innerHTML = "";
+                }
+            }
+        document.addEventListener("keydown", function(event){
+            const tecla = event.key;
+            mostrar(tecla);
+        })
+    </script>
+
+
+</body> 
+</html>

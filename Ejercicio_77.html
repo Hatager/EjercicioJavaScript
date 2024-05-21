@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 77</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+
+        window.onload= function (){
+            alert("La página se ha cargado correctamente")
+        };
+
+        window.onbeforeunload= function (){
+            return "La página se ha cargado"
+        };
+
+        function despedirse(){
+            alert("Hasta luego!");
+            window.close();
+        }
+    </script>
+    <h1>Bienvenido</h1>
+    <button onclick="despedirse()">Adios</button>
+    <div id="contenedor"></div>
+</body>
+</html>

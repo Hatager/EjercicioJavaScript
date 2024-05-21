@@ -1,0 +1,41 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 69 Find</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        function Portatil(marca, modelo, procesador, memoriaRAM, discoDuro, pantallaPulgadas, tarjetaGrafica, sistemaOperativo){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.procesador = procesador;
+            this.memoriaRAM = memoriaRAM;
+            this.discoDuro = discoDuro;
+            this.pantallaPulgadas = pantallaPulgadas;
+            this.tarjetaGrafica = tarjetaGrafica;
+            this.sistemaOperativo = sistemaOperativo;
+            this.informacion = function(){
+                console.log(`Marca: ${this.marca} \n\rModelo: ${this.modelo} \n\rProcesador: ${this.procesador} \n\rMemotia RAM: ${this.memoriaRAM} \n\rDisco duro: ${this.discoDuro} \n\rPantalla por pulgadas: ${this.pantallaPulgadas}\n\rTarjeta gráfica: ${this.tarjetaGrafica} \n\rSistema operativo: ${this.sistemaOperativo}`);
+            }
+        }
+        var Ordenadores  = [
+
+         Ordenador1 = new Portatil("HP", "el modelo de HP", "Intel Core i5-13400", "64GB", "SNV2S/1000G NV2 SSD 1TB PCIe NVMe Gen 4.0", "27 pulgadas", "Gigabyte AORUS GeForce RTX 4090 MASTER 24GB GDDR6X DLSS3", "Windows 10"),
+
+         Ordenador2 = new Portatil("Huawei", "modelo Huawei", "AMD Ryzen 5 5500GT", "32GB", "Kingston KC3000 SSD 2TB M.2 PCIe 4.0 NVMe", "23 pulgadas", "MSI GeForce RTX 4060 Ti VENTUS 3X OC 8 GB GDDR6 DLSS3", "Linux"),
+
+         Ordenador3 = new Portatil("Dell", "Dell modelo", "AMD Ryzen 7 7800X3D 4.2 GHz/5 GHz", "16GB", "Acer Predator GM7 2TB SSD M.2 PCI Express 4.0 NVMe", "15.5 pulgadas", "MSI GeForce RTX 4060 Ti VENTUS 3X OC 16GB GDDR6 DLSS3", "Windows XP")
+];
+
+
+        var pantalla = Ordenadores.find(function(Ordenador){
+            return parseFloat(Ordenador.pantallaPulgadas) === 15.5;
+        }) ;
+        console.log(pantalla);
+
+    </script>
+</body>
+</html>

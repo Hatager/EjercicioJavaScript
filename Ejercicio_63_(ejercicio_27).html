@@ -1,0 +1,31 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 63</title>
+</head>
+<body>
+
+    <button onclick="solicitarNumero()">Iniciar bucle</button>
+
+    <script type="text/javascript">
+        function solicitarNumero(){
+            let input ="";
+            while(true){   
+                input = prompt("Introduce un número o escriba salir o SALIR");
+                if(input === "salir" || input === "SALIR"){
+                    break;
+                }
+                if(!isNaN(parseInt(input))){
+                    console.log("Numero introducido", input);
+                }else{
+                    alert("por favor, introduzca un número valido.");
+                }
+                
+            }
+
+        }
+
+    </script>
+</body>
+</html>
