@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 88</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <img id="imagen" src="https://images.pexels.com/photos/1540258/pexels-photo-1540258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <div id="mensaje"></div>
+
+
+    <script>
+        const imagen = document.getElementById("imagen");
+        const mensaje = document.getElementById("mensaje");
+
+        imagen.addEventListener("abort", function(){
+            mensaje.textContent = "La carga de la imagen ha sido cancelada";
+        });
+
+    </script>
+
+
+</body> 
+</html>

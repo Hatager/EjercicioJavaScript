@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 85</title>
+    <style>
+        #drag{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #drop{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="drag" draggable="true">Arrastrame</div>
+    <div id="drop">Sueltame</div>
+
+
+    <script>
+        const drag = document.getElementById("drag");
+        const drop = document.getElementById("drop");
+
+        function dragStart(event){
+            event.dataTransfer.setData("text/plain", event.target.id);
+        }
+
+        function dragOver(event){
+            event.preventDefault();
+        }
+
+        function dropHandler(event){
+            event.preventDefault();
+            const data = event.DataTransfer.getData("text/plain");
+            const draggedElement = document.getElementById("data");
+            event.target.appendChild(draggedElement);
+            draggedElement.style.display = 'none';
+        }
+
+        drag.addEventListener("dragstart", dragStart);
+        drop.addEventListener("dragover", dragOver);
+
+
+
+
+    </script>
+
+
+</body> 
+</html>

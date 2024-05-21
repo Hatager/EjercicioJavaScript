@@ -1,0 +1,102 @@
+MARIA_PEREZ_CABRERA_MF0951_2_HTML_CSS_JAVASCRIPT.html
+<!DOCTYPE html>
+<html lang="es-Es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Maria_Pérez_Cabrera">
+
+        <title>Ordenar Números Aleatorios con un Algoritmo</title>
+
+        <style>
+            body{
+                margin: 0;
+                border: 0;
+
+                background-image: url('FondoNumeros.jpg');
+                background-color: #1e3f76;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+
+                text-align: center;
+            }
+            h1{
+                text-decoration: underline;
+                font-variant: small-caps;
+                color: rgb(0, 0, 0);
+                text-shadow: 0px 0px 3px rgb(255, 255, 255);
+            }
+            h2{
+                font-variant: small-caps;
+            }
+
+            /*APARIENCIA DE LOS CUADROS DE TEXTO*/
+            .cuadroTexto{
+                background-color: rgba(255, 255, 255, 0.845);
+                border-radius: 5px;
+                margin-bottom: 10px;
+                border: 3px black solid;
+                padding: 5px;
+            }
+            .cuadro1{
+                position: relative;
+                width: 50%;
+                left:25%;
+            }
+
+            .botones:hover{
+                background-color: #ccecff;
+            }
+            .botones:active{
+                background-color: #6080b7;
+            }
+        </style>
+
+        <script>
+            var numAleatorios = [];
+
+            function generarNumeros(){
+                numAleatorios = [];
+
+                for(i=0; i< 9; i++){
+                    var numAlazar = Math.floor(Math.random() * (99 - 1) + 1);
+                    numAleatorios.push(numAlazar);
+                }
+                document.getElementById('resultado').innerHTML = "Array desordenado: " + numAleatorios;
+            }
+
+            function algoritmoBurbuja(){
+                numAleatorios.sort((a,b) => a - b);
+                document.getElementById('resultado').innerHTML = "Array ordenado: " + numAleatorios;
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <h1>-Ordena Números Aleatorios-</h1>
+
+        <div>
+            <div class="cuadro1">
+                <div class="cuadroTexto">
+                    <h2>-Generador de Números-</h2>
+                    <hr>
+    
+                    <input class="botones" type="button" value="¡Generar!" onclick="generarNumeros()">
+                    <h2>-Organizar los números-</h2>
+                    <hr>
+                    <input class="botones" type="button" value="¡Ordenar!" onclick="algoritmoBurbuja()">
+                </div>
+            </div>
+        </div>
+
+        <div class="cuadro1">
+            <div class="cuadroTexto">
+                <p id="resultado">Genera los números</p>
+            </div>
+        </div>
+    </body>
+
+</html>

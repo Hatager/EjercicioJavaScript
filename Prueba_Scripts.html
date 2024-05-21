@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts</title>
+    <style>
+
+    </style>
+    <script>
+        alert("Este mensaje saldrá al iniciar la página web.");
+        function cargaInicio(){
+            alert("Este mensaje saldrá cuando se haya cargado la página web.");
+        }
+        function cargaInicio(){
+            alert("Este mensaje saldrá cuando se haya cargado la página web.");
+        }
+        function ejecutarClick(){
+            alert("Este mensaje saldrá después del evento 'onclick()'");
+        }
+        function retardoA(){
+            console.log("Este mensaje saldrá después de 5000 milisegundos.");
+        }
+        function retardoB(){
+            console.log("Este mensaje saldrá después de 10000 milisegundos.");
+        }
+        setTimeout(retardoA, 5000);
+        setTimeout(retardoB, 10000);
+    </script>
+</head>
+<body onload="cargaInicio()">
+    <div id="mensaje"></div>
+
+
+    <input type="button" onclick="ejecutarClick()" value="Púlsame!!">
+    
+
+
+</body> 
+</html>

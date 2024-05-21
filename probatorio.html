@@ -1,0 +1,62 @@
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>probatorio</title>
+</head>
+<body>
+    <h1>Probatorio 9 números aleatorios</h1>
+    <div id="numeros"></div>
+    <div id="resultado"></div>
+
+    <script type="text/javascript">
+    
+    
+    var numeros = [];
+
+    for(let i = 0; i <= 8; i++){
+        var numeroAleatorio = numero_aleatorio(1,99);
+        numeros.push(numeroAleatorio);
+        
+
+    }
+    
+    function numero_aleatorio(MIN, MAX) {
+        var numeroAleatorio = Math.floor(Math.random()*MAX) + MIN;
+        return numeroAleatorio;
+
+    }
+
+
+
+
+
+
+
+    function ordenarBurbuja(numeros){
+        var longitud = numeros.length-1; 
+        var guardado;
+        for(var i = 0; i < longitud; i++){
+            for(var j = 0; j < (longitud - i); j++){
+                if (numeros[j] > numeros[j + 1]) {
+                   
+                        guardado = numeros[j];
+                        numeros[j] = numeros[j + 1];
+                        numeros[j + 1] = guardado;
+                    }
+            }
+        }
+    }
+    console.log("Los números originales son: " + numeros);
+    document.getElementById("numeros").innerHTML = "Los números originales son : " + numeros.join(' - ');
+
+    ordenarBurbuja(numeros);
+
+    console.log("Los números ordenados son: " + numeros);
+    document.getElementById("resultado").innerText = "Los números ordenados son : " + numeros.join(' - ');
+    
+
+
+    </script>
+</body>
+</html>

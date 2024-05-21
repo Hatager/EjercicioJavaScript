@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 83</title>
+
+</head>
+<body>
+    <div id="resultado"></div>
+    <form action="" onsubmit="enviarFormulario(); return false;" onreset="restablecerFormulario()">
+        <label>Nombre: </label><br>
+        <input type="text" onchange="cambioNombre()" onblur="validarNombre()" onfocus="resaltarNombre()"><br>
+        <label>Email: </label><br>
+        <input type="text"onchange="cambioEmail()" onblur="validarEmail()" onfocus="resaltarEmail()"><br>
+        <label>Contraseña: </label><br>
+        <input type="password" onblur="validarContrasenya()"><br>
+        <label>Comentario: </label><br>
+        <textarea onselect="textoSeleccionado()"></textarea><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <script>
+        function cambioNombre(){
+            console.log("El nombre ha cambiado");
+        }
+        function validarNombre(){
+            console.log("Nombre validado");
+        }
+        function resaltarNombre(){
+            console.log("Resaltando: Nombre");
+        }
+        function cambioEmail(){
+            console.log("El email ha cambiado");
+        }
+        function validarEmail(){    
+            console.log("Email validado");
+        }
+        function resaltarEmail(){
+            console.log("Resaltando: Email");
+        }
+        function validarContrasenya(){
+            console.log("Contraseña validada");
+        }
+        function textoSeleccionado(){
+            console.log("Texto seleccionado");
+        }
+        function enviarFormulario(){
+            console.log("Formulario enviado");
+        }
+        function restablecerFormulario(){
+            console.log("Formulario restablecido");
+        }
+
+
+
+        
+    </script>
+
+
+</body> 
+</html>

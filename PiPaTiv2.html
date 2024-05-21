@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiPati 2</title>
+</head>
+<body style="text-align: center;">
+    <h1>Piedra - Papel - Tijera</h1>
+    <h3>Jugador1</h3>
+    <button id="piedra1">Piedra</button>
+    <button id="papel1">Papel</button>
+    <button id="tijera1">Tijera</button>
+
+    <h3>Jugador2</h3>
+    <button id="piedra2">Piedra</button>
+    <button id="papel2">Papel</button>
+    <button id="tijera2">Tijera</button>    
+    
+    <p>Jugador1 selecciono: <span id="player1"></span></p>
+    <p>Jugador2 selecciono: <span id="player2"></span></p>
+    <h3>RESULTADO</h3>
+    <div id="result"></div>
+
+    <script type="text/javascript">        
+        let jugador1 = 0;
+        let jugador2 = 0;
+
+        let player1El = document.getElementById("player1");
+        let player2El = document.getElementById("player2");
+        let resultEl = document.getElementById("result");
+
+        let buttonPiedra1El = document.getElementById("piedra1");
+        buttonPiedra1El.addEventListener("click", function () {
+        jugador1 = 1;
+        player1.innerText = "Piedra";
+        jugar();
+        });
+
+        let buttonPapel1El = document.getElementById("papel1");
+        buttonPapel1El.addEventListener("click", function () {
+        jugador1 = 2;
+        player1.innerText = "Papel";
+        jugar();
+        });
+
+        let buttonTijera1El = document.getElementById("tijera1");
+        buttonTijera1El.addEventListener("click", function () {
+        jugador1 = 3;
+        player1.innerText = "Tijera";
+        jugar();
+        });
+
+
+        let buttonPiedra2El = document.getElementById("piedra2");
+        buttonPiedra2El.addEventListener("click", function () {
+        jugador2 = 1;
+        player2.innerText = "Piedra";
+        jugar();
+        });
+
+        let buttonPapel2El = document.getElementById("papel2");
+        buttonPapel2El.addEventListener("click", function () {
+        jugador2 = 2;
+        player2.innerText = "Papel";
+        jugar();
+        });
+
+        let buttonTijera2El = document.getElementById("tijera2");
+        buttonTijera2El.addEventListener("click", function () {
+        jugador2 = 3;
+        player2.innerText = "Tijera";
+        jugar();
+        });
+
+        function jugar() {
+        if (jugador1 == 0 || jugador2 == 0) {
+            return;
+        }
+
+        let resultEl = document.getElementById("result")
+
+        if (jugador1 == 1 && jugador2 == 3) {
+            resultEl.innerText = "jugador1 gana";
+        } else if (jugador1 == 2 && jugador2 == 1) {
+            resultEl.innerText = "jugador1 gana";
+        } else if (jugador1 == 3 && jugador2 == 2) {
+            resultEl.innerText = "jugador1 gana";
+        } else if (jugador2 == 1 && jugador1 == 3) {
+            resultEl.innerText = "jugador2 gana";
+        } else if (jugador2 == 2 && jugador1 == 1) {
+            resultEl.innerText = "jugador2 gana";
+        } else if (jugador2 == 3 && jugador1 == 2) {
+            resultEl.innerText = "jugador2 gana";
+        } else {
+            resultEl.innerText = "empate \n\n";
+        }
+        }
+         
+    </script>
+</body>
+</html>
